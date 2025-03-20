@@ -1,9 +1,11 @@
+//random pick of the computer
 function getRandomComputerResult() {
     const options = ["Rock", "Paper", "Scissors"];
-    const randomIndex = Math.floor(Math.random() * options.length);
+    const randomIndex = Math.floor(Math.random() * options.length); //random index for the computer to pick in the options array
     return options[randomIndex];
   }
-  
+
+//player win conditions; this will return true
   function hasPlayerWonTheRound(player, computer) {
     return (
       (player === "Rock" && computer === "Scissors") ||
@@ -11,13 +13,16 @@ function getRandomComputerResult() {
       (player === "Paper" && computer === "Rock")
     );
   }
-  
+
+//initialization of scores
   let playerScore = 0;
   let computerScore = 0;
-  
+
+//result display propmpt
   function getRoundResults(userOption) {
     const computerResult = getRandomComputerResult();
-  
+
+//display condition, battle of choices, random for computer and choice for player
     if (hasPlayerWonTheRound(userOption, computerResult)) {
       playerScore++;
       return `Player wins! ${userOption} beats ${computerResult}`;
@@ -28,14 +33,16 @@ function getRandomComputerResult() {
       return `Computer wins! ${computerResult} beats ${userOption}`;
     }
   }
-  
+
+//initialization of placements of the texts from script to front end
   const playerScoreSpanElement = document.getElementById("player-score");
   const computerScoreSpanElement = document.getElementById("computer-score");
   const roundResultsMsg = document.getElementById("results-msg");
   const winnerMsgElement = document.getElementById("winner-msg");
   const optionsContainer = document.querySelector(".options-container");
   const resetGameBtn = document.getElementById("reset-game-btn");
-  
+
+//showing of results
   function showResults(userOption) {
     roundResultsMsg.innerText = getRoundResults(userOption);
     computerScoreSpanElement.innerText = computerScore;
