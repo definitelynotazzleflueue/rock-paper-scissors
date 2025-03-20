@@ -25,7 +25,7 @@ function getRandomComputerResult() {
       return `It's a tie! Both chose ${userOption}`;
     } else {
       computerScore++;
-      return `Computer wins! ${computerResult} beats ${userOption} You Lose Nigga!`;
+      return `Computer wins! ${computerResult} beats ${userOption}`;
     }
   }
   
@@ -43,7 +43,7 @@ function getRandomComputerResult() {
   
     if (playerScore === 3 || computerScore === 3) {
       winnerMsgElement.innerText = `${
-        playerScore === 3 ? "Player" : "Computer"
+        playerScore === 3 ? "Player" : "The Computer"
       } has won the game!`;
   
       resetGameBtn.style.display = "block";
