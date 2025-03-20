@@ -25,7 +25,7 @@ function getRandomComputerResult() {
       return `It's a tie! Both chose ${userOption}`;
     } else {
       computerScore++;
-      return `Computer wins! ${computerResult} beats ${userOption}`;
+      return `Computer wins! ${computerResult} beats ${userOption} You Lose Nigga!`;
     }
   }
   
