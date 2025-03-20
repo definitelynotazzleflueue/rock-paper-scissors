@@ -74,17 +74,15 @@ function getRandomComputerResult() {
       // Clear messages
       winnerMsgElement.innerText = "";
       roundResultsMsg.innerText = "";
-  
-  
-  
   };
-  
+  //resets game
   resetGameBtn.addEventListener("click", resetGame);
-  
+  //transfers element to script
   const rockBtn = document.getElementById("rock-btn");
   const paperBtn = document.getElementById("paper-btn");
   const scissorsBtn = document.getElementById("scissors-btn");
   
+  //gets user input
   rockBtn.addEventListener("click", function () {
     showResults("Rock");
   });
